@@ -1,38 +1,144 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  font-family: 'Maven Pro', sans-serif;
+}
+html, body {
+  background-color: #F4F4F4;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2, a, p {
+  color: #444444;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
+  position: fixed;
+  z-index: 3000;
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 500;
+  background-color: white;
+  min-width: 100%;
+  height: 75px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  box-shadow: 0 2px rgba(68, 68, 68, 0.746);
+}
+
+.navbar-link-container {
+  display: flex;
+}
+
+.navbar-link {
+  margin: auto 40px;
+  padding:4px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  font-size: large;
+  font-weight: bold;
+
+}
+
+.navbar-link:hover {
+  color: aqua;
+  cursor: pointer;
+  border-color: aqua;
+  transition: all 0.3s;
+  
+}
+
+.navbar-link:first-child {
+  border-style: solid;
+  border-width: 2px;
+  border-color: aqua;
+  padding:4px
+}
+
+.navbar-logo {
+  background-color: aqua;
+  margin-right: 40px;
+}
+
+.home-content {
+  z-index: -1;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.home-image {
+  width: 100%;
+}
+
+.who-am-i {
+  font: 33px sans-serif;
+  font-family: 'Maven Pro', sans-serif;
+  margin-top: 30px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 1;
+  font-weight: bolder;
+}
+
+.who-am-i:hover {
+  color: aqua;
+  cursor:default;
+}
+
+.who-am-i:before {
+  border-top: 2px solid aqua;
+  content:"";
+  margin: 0 auto;
+  position: absolute;
+  top: 15px; left: 0; right: 0; bottom: 0;
+  width: 900px;
+  z-index: -1;
+}
+
+h2 span { 
+  background: rgb(241, 241, 241); 
+  padding: 0 15px; 
+}
+
+.portfolio {
+  display: flex;
+}
+
+.portfolio-card {
+  width: 33%;
+  background-color: white;
+  margin: 20px;
+  padding: 10px;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.151);
+  border-radius: 5px;
+}
+
+.contact-card {
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.151);
+}
+
+.contact-input {
+  width: 400px;
+  font-family: 'Maven Pro', sans-serif;
+  border: none;
+  background-color: rgba(240, 248, 255, 0.609);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.contact-textbox {
+  min-width: 400px;
+  font-family: 'Maven Pro', sans-serif;
+  border: none;
+  background-color: rgba(240, 248, 255, 0.609);
+  color: white;
+  resize: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.contact {
+  margin-bottom: 10px;
+  padding: 10px;
 }
