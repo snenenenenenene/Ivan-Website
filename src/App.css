@@ -1,15 +1,32 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 * {
   font-family: 'Maven Pro', sans-serif;
 }
 html, body {
   background-color: #F4F4F4;
+  scroll-behavior:smooth;
 }
 
 h2, a, p {
   color: #444444;
+  text-decoration: none;
+}
+
+ul {
+  list-style-position: inside;
+  list-style-type: none;
+}
+
+ul > li {
+  text-indent: -5px;
+}
+ul > li:before {
+  content: "-";
+  text-indent: -5px;
 }
 
 .navbar {
@@ -17,12 +34,12 @@ h2, a, p {
   z-index: 3000;
   font-family: 'Maven Pro', sans-serif;
   font-weight: 500;
-  background-color: white;
+  background-color: #444444;
   min-width: 100%;
   height: 75px;
   display: flex;
   justify-content: center;
-  box-shadow: 0 2px rgba(68, 68, 68, 0.746);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
 .navbar-link-container {
@@ -34,16 +51,18 @@ h2, a, p {
   padding:4px;
   border-style: solid;
   border-width: 2px;
-  border-color: white;
+  border-color: #444444;
+  color: #F4F4F4;
   font-size: large;
   font-weight: bold;
+  transition: all 0.3s;
 
 }
 
 .navbar-link:hover {
-  color: aqua;
+  color: rgb(203, 231, 255);
   cursor: pointer;
-  border-color: aqua;
+  border-color: rgb(203, 231, 255);
   transition: all 0.3s;
   
 }
@@ -51,23 +70,51 @@ h2, a, p {
 .navbar-link:first-child {
   border-style: solid;
   border-width: 2px;
-  border-color: aqua;
+  border-color: rgb(203, 231, 255);
   padding:4px
 }
 
 .navbar-logo {
-  background-color: aqua;
   margin-right: 40px;
 }
 
 .home-content {
-  z-index: -1;
   height: 100vh;
   overflow: hidden;
+  background-color: #444444;
 }
 
+.contact-content {
+  padding: 25px;
+  overflow: hidden;
+  /* background-color: #444444; */
+}
+
+.home-text {
+  color: #FFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 204;
+  font-size: 75px;
+  font-weight: 1000;;
+}
+
+.home-text p {
+  color: #F4F4F4;
+  font-size: 50px;
+  font-weight: 800;
+  margin-top: -50px;
+}
+.home-text h2 {
+  color: #FFF;
+  font-size: 75px;
+  font-weight: 1000;;
+}
 .home-image {
   width: 100%;
+  z-index: 400;
 }
 
 .who-am-i {
@@ -79,15 +126,17 @@ h2, a, p {
   text-transform: uppercase;
   z-index: 1;
   font-weight: bolder;
+  transition: all 0.3s;
 }
 
 .who-am-i:hover {
-  color: aqua;
+  color: rgb(203, 231, 255);
   cursor:default;
+  transition: all 0.3s;
 }
 
 .who-am-i:before {
-  border-top: 2px solid aqua;
+  border-top: 2px solid rgb(203, 231, 255);
   content:"";
   margin: 0 auto;
   position: absolute;
@@ -110,7 +159,7 @@ h2 span {
   background-color: white;
   margin: 20px;
   padding: 10px;
-  box-shadow: 10px 10px rgba(0, 0, 0, 0.151);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   border-radius: 5px;
 }
 
@@ -118,7 +167,11 @@ h2 span {
   background-color: white;
   margin: 10px;
   padding: 10px;
-  box-shadow: 10px 10px rgba(0, 0, 0, 0.151);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.contact-card h2 {
+  font-size: 15px;
 }
 
 .contact-input {
@@ -126,7 +179,7 @@ h2 span {
   font-family: 'Maven Pro', sans-serif;
   border: none;
   background-color: rgba(240, 248, 255, 0.609);
-  color: white;
+  transition: all 0.3s;
 }
 
 .contact-textbox {
@@ -134,11 +187,155 @@ h2 span {
   font-family: 'Maven Pro', sans-serif;
   border: none;
   background-color: rgba(240, 248, 255, 0.609);
-  color: white;
   resize: none;
+  transition: all 0.3s;
+}
+.contact-textbox:focus, .contact-input:focus {
+  outline: none;
+  transition: all 0.3s;
+  background-color: rgb(235, 246, 255);
 }
 
+.contact-button {
+  border:none;
+  padding: 10px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  background-color: #444444;
+  color: aliceblue;
+  transition: all 0.3s;
+}
+
+.contact-button:hover {
+  transition: all 0.3s;
+  color: #444444;
+  background-color: aliceblue;
+  cursor: pointer;
+}
 .contact {
   margin-bottom: 10px;
   padding: 10px;
+}
+
+.program-card {
+  transition: all 1s;
+  background-color: #F4F4F4;
+  margin: 5px 20px;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.programs {
+  background-color: #FFF;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.program-button {
+  background-color: aliceblue;
+  padding: 20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  transition: all 0.3s;
+}
+
+.program-button:hover {
+  cursor: pointer;
+  background-color: rgb(203, 231, 255);
+  transition: all 0.3s;
+}
+
+.program-button-text:hover {
+  color: rgb(203, 231, 255);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.program-button-text {
+  font-weight: bold;
+}
+
+.challenge-coach-card {
+  background-color: #F4F4F4;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -75px;
+  visibility: hidden;
+}
+
+.back-to-top {
+  position: -webkit-sticky;
+  position: fixed;
+  bottom: 1rem;
+  z-index: 100;
+  background-color: #444444;
+  width: 50px;
+  height: 50px;
+  top: 95%;
+  left: 50%;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  display: flex;
+  border-radius: 100%;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  transition: all 0.3s;
+
+}
+
+.back-to-top:hover {
+  top: 94%;
+  transition: all 0.3s;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  padding-left: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #444444;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #F4F4F4;
+  border-radius: 10px;
+  border: 2px solid #444444;
+  transition: all 1s;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(203, 231, 255);
+  transition: all 1s;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: aliceblue;
+  background: #444444;
+}
+
+::selection {
+  color: aliceblue;
+  background: #444444;
+}
+
+.footer {
+  background-color: #444444;
+  text-align: start;
+  padding-left: 20px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+.footer p {
+  color: #F4F4F4;
 }
