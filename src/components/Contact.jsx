@@ -40,7 +40,7 @@ export default class Contact extends Component {
     return (
       <div className="contact-content">
         <a className="anchor" id="contact"></a>
-        <div style={{maxHeight: 100 + "vh"}}>
+        <div>
           <div className="lg:w-2/3 md:w-1/2 bg-gray-900 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
             <div className="contact-full" style={{ display: 'flex', width: 100 + "%", height: 100 + "%" }}>
               <div style={{ display: 'flex',width: 100 + "%", flexDirection: "column", justifyContent:"center", alignItems:"center" }}>
@@ -115,7 +115,7 @@ export default class Contact extends Component {
                   </form>
                 </div>
               </div>
-              <div style={{ width: 100 + "%",display:"flex", overflow: "hidden", justifyContent: "center", alignItems:"center" }}>
+              <div className="map-container" style={{ width: 100 + "%",display:"flex", justifyContent: "center", alignItems:"center" }}>
                 <iframe
                 className="map"
                   width="90%"
