@@ -1,7 +1,7 @@
 .App {
   text-align: center;
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
 }
 * {
   font-family: 'Maven Pro', sans-serif;
@@ -9,7 +9,7 @@
 html, body {
   background-color: #F4F4F4;
   scroll-behavior:smooth;
-}
+  min-height: 100%;}
 
 h2, a, p {
   color: #444444;
