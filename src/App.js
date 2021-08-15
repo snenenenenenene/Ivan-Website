@@ -66,7 +66,7 @@ function App() {
                     </div>
                 </div>
       <Home/>
-      <Portfolio/>
+      {/* <Portfolio/> */}
       <Programs/>
       <Tarifs/>
       <Contact/>

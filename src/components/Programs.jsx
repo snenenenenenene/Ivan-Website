@@ -84,7 +84,7 @@ export default class Programs extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="challenge-coach-card" style={{display: "flex"}}>
+                <div className="challenge-coach-card">
                     <div>
               <p style={{fontWeight: "bolder"}}>CHALLENGE MET UW COACH!</p>
            <p> Dit is een challenge voor de volwassenen die van niveau nul starten of voor diegenen die enkel de schoolslag beheersen en als doel bijvoorbeeld na 1 jaar vlot crawl en rugslag wensen te zwemmen. We stellen een persoonlijk doel op met wat u wenst te bereiken met zwemles- en/of fitness coaching na 1 jaar. Dan beginnen we te trainen.
@@ -98,7 +98,7 @@ export default class Programs extends Component {
    <li>Sportverzekering b.a.</li> 
 </ul>
 </div>
-<img src={ivan} height="230" style={{borderRadius: 100 + "%"}}/>
+<img src={ivan} height="250" width="250" style={{borderRadius: 100 + "%"}}/>
                 </div>
             </div>
         )
