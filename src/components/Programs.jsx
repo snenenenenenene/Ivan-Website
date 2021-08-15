@@ -59,8 +59,8 @@ export default class Programs extends Component {
                     </div>
                 </div>
                 <div>
-                    <div style={{ display: "flex", justifyContent:"space-between" }}>
-                        <div>
+                    <div className="instaples" style={{ display: "flex", justifyContent:"space-between" }}>
+                        <div style={{width: 50 + "%"}}>
                             <p>INSTAPLES:</p>
                             <ul>
                                 <li>Kennismaking</li>
@@ -70,7 +70,7 @@ export default class Programs extends Component {
                                 <li>Bespreking verder verloop</li>
                             </ul>
                         </div>
-                        <div>
+                        <div style={{width: 50 + "%"}}>
                             <p>BELANGRIJKE AFPSRAKEN VOOR DE LES:</p>
                             <ul>
                                 <li>Tien lessen met voorbetalingstarief starten op datum eerste

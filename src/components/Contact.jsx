@@ -42,14 +42,14 @@ export default class Contact extends Component {
         <a className="anchor" id="contact"></a>
         <div style={{maxHeight: 100 + "vh"}}>
           <div className="lg:w-2/3 md:w-1/2 bg-gray-900 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
-            <div style={{ display: 'flex', width: 100 + "%", height: 100 + "%" }}>
-              <div style={{ display: 'flex', flexDirection: "column" }}>
-                <div className="contact-card" style={{height: 35 + "%"}}>
+            <div className="contact-full" style={{ display: 'flex', width: 100 + "%", height: 100 + "%" }}>
+              <div style={{ display: 'flex',width: 100 + "%", flexDirection: "column", justifyContent:"center", alignItems:"center" }}>
+                <div className="contact-card" style={{height: 35 + "%", width: 90 + "%"}}>
                   <div>
-                    <h2 className="title-font font-semibold text-white tracking-widest text-xs">
+                    <h2>
                       ADRES
                     </h2>
-                    <p className="mt-1">
+                    <p>
                       STRAAT, NR<br />
                       STAD
                     </p>
@@ -67,7 +67,7 @@ export default class Contact extends Component {
                     <p className="leading-relaxed">+32-477-45-10-00</p>
                   </div>
                 </div>
-                <div className="contact-card" style={{ width: 500, height: 55 + "%" }}>
+                <div className="contact-card" style={{ width: 90 + "%", height: 55 + "%" }}>
                   <form
                     name="contact"
                     onSubmit={this.handleSubmit}
@@ -115,12 +115,12 @@ export default class Contact extends Component {
                   </form>
                 </div>
               </div>
-              <div style={{ width: 100 + "%", margin: 10, overflow: "hidden" }}>
+              <div style={{ width: 100 + "%",display:"flex", overflow: "hidden", justifyContent: "center", alignItems:"center" }}>
                 <iframe
-                  width="100%"
-                  height="100%"
+                className="map"
+                  width="90%"
+                  height="90%"
                   title="map"
-                  style={{ minWidth: 100 + "%" }}
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d208867.62157009047!2d4.405237023020187!3d51.19682961303586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f6da2a095203%3A0x6a9c80feae18feda!2sOlympic%20swimming%20center%20Wezenberg!5e0!3m2!1sen!2sbe!4v1628935893673!5m2!1sen!2sbe"
                 />
               </div>

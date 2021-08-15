@@ -5,11 +5,27 @@ import Portfolio from './components/Portfolio';
 import Programs from './components/Programs';
 import Tarifs from './components/Tarifs';
 import Contact from './components/Contact';
+import {useState} from 'react'
 
 function App() {
+  const [active, setActive] = useState(false)
   return (
     <div className="App">
       <div className="navbar">
+        <div className="hamburger-menu-div" onClick={() => setActive(!active)}>
+      <svg
+      width={48}
+      height={48}
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="#FFFFFF"
+      className="hamburger-menu"
+    >
+      <path
+        d="M41 14H7a2 2 0 010-4h34a2 2 0 010 4zM41 26H7a2 2 0 010-4h34a2 2 0 010 4zM41 38H7a2 2 0 010-4h34a2 2 0 010 4z"
+      />
+    </svg>
+    </div>
         <a href="#home" style={{display: "flex"}}>
                     <svg width="60" className="navbar-logo" alt="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
       <path
@@ -57,16 +73,16 @@ function App() {
       </g>
     </svg>
     </a>
-                    <div className="navbar-link-container">
+                    <div className={ active ? "navbar-link-container active" : "navbar-link-container"} >
                     <a href="#home" className="navbar-link">Home</a>
                     <a href="#portfolio" className="navbar-link">Portfolio</a>
                     <a href="#programs" className="navbar-link">Onderdelen</a>
-                    {/* <a href="#tarifs" className="navbar-link">Tarieven</a> */}
+                    <a href="#tarifs" className="navbar-link">Tarieven</a> 
                     <a href="#contact" className="navbar-link">Contact</a>
                     </div>
                 </div>
       <Home/>
-      {/* <Portfolio/> */}
+      <Portfolio/>
       <Programs/>
       <Tarifs/>
       <Contact/>
