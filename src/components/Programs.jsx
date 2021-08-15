@@ -42,8 +42,8 @@ export default class Programs extends Component {
                         <p className="program-button-text" onClick={() => this.setState({ carouselVar1: -100, carouselVar2: 0 })}>KRACHTTRAINING</p>
                     </div>
                 </div>
-                <div className="programs-card" style={{ position: "relative", height: 225, width: 100 + "%", overflow: "hidden" }}>
-                    <div className="program-card crawl" style={{ position: "relative", height: 170, left: this.state.carouselVar1 + "%" }}>
+                <div className="programs-card" style={{position: "relative",  width: 100 + "%",maxHeight: 400 , overflow: "clip" }}>
+                    <div className="program-card crawl" style={{ position: "relative",maxHeight: 400,minHeight: 300, left: this.state.carouselVar1 + "%" }}>
                         <p>Crawl</p>
                         Het internet bulkt van info over technieken gesteund door allerhande foto’s. 
                         Als u zo’n zwemstijl psychomotorisch kan opslaan om nadien te perfect na te doen… proficiat ! 
@@ -53,7 +53,7 @@ export default class Programs extends Component {
                         Hierbij kunnen zelfs simpele opmerkingen helpen. 
                         Zelfs indien u een kameraad hebt die u inzien goed crawl zwemt en u zijn beste tips levert stel ik toch eens voor een les te boeken bij mij.
                     </div>
-                    <div className="program-card kracht" style={{ position: "relative", height: 170, bottom: 215, left: this.state.carouselVar2 + "%" }}>
+                    <div className="program-card kracht" style={{ position: "relative",maxHeight: 400,minHeight: 300, left: this.state.carouselVar2 + "%", transform: "translate(0, -101%)"}}>
                         <p>Kracht</p>
                         Deze begeleiding is gericht op krachttraining en dit enkel in functie/combinatie van de zwemlessen. De combinatie zwem- en krachttraining is bijzonder compleet en doeltreffend. Er wordt geoefend op kracht, stability en de psychomotorische coördinatie van uw musculatuur. Bepaalde spiergroepen gaan we geïsoleerd trainen en strechen in functie van uw zwemstijl. Prijs uur idem privé zwemles. U kan uw tienlessentarief combineren met zwemlessen. De lessen worden gegeven in samenwerking met Wezenberg fit.
                     </div>
