@@ -1,0 +1,680 @@
+:root {
+  --bg-color: #272a2c;
+  --bg-color-transparent: #5f686d5b;
+  --bg-color2: #283b47;
+  --text-color: #fff;
+}
+
+.App {
+  background-color: var(--bg-color);
+  text-align: center;
+}
+
+.program-container {
+  height: 100vh;
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.kracht {
+  background-image: url("./pictures/kettle.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.crawl {
+  background-image: url("./pictures/crawl.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.program-container {
+  p {
+    width: 50%;
+    justify-content: center;
+    font-size: larger;
+  }
+
+  h2 {
+    font-weight: bold;
+  }
+}
+
+body,
+p,
+a,
+h2 {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+div {
+  a {
+    color: var(--text-color);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--text-color);
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+
+  .accordion-button:not(.collapsed) {
+    color: var(--text-color);
+    background-color: var(--bg-color2);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 13%);
+  }
+
+  .accordion-item {
+    background-color: var(--bg-color);
+  }
+}
+
+h2 .accordion-header {
+  background-color: var(--bg-color);
+  font-weight: bolder;
+}
+
+div {
+  .accordion-button {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: 1.1rem;
+  }
+
+  .accordion-body {
+    color: var(--text-color);
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .challenge-coach-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .contact-textbox {
+    height: 100px;
+    width: 30rem;
+  }
+
+  div {
+    .accordion-button {
+    font-size: 1rem;
+  }
+}
+  .program-button-text {
+    font-size: 12px;
+    margin: 5px;
+  }
+
+  .contact-full {
+    flex-direction: column-reverse;
+  }
+
+  .coach-container {
+    flex-direction: column;
+  }
+
+  div {
+    .navbar-link-container {
+      position: fixed;
+      transition: all 0.3s;
+      top: -100%;
+      display: flex;
+      flex-direction: column;
+      opacity: 0.3;
+      width: 100%;
+      right: 100%;
+      z-index: -1;
+      padding: 150px 0 10px;
+
+      &.active {
+        position: fixed;
+        transition: all 0.3s;
+        opacity: 1;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--bg-color);
+        width: 100%;
+      }
+    }
+
+    .navbar-logo {
+      display: none;
+    }
+
+    .coach-image {
+      margin: auto;
+    }
+
+    .navbar {
+      position: fixed;
+      background-color: var(--bg-color);
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .hamburger-menu-div {
+      display: flex;
+    }
+  }
+
+  .portfolio-card {
+    margin: 2% auto;
+    transition: all 1s;
+
+    &:hover {
+    }
+  }
+
+  .instaples {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home-image {
+    transform: translate(-30%, 0);
+  }
+
+  .contact-full {
+    padding-bottom: 10%;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .map-container {
+    height: 400px;
+  }
+
+  .portfolio {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+* {
+  font-family: "Maven Pro", sans-serif;
+}
+
+.coach-image {
+  border-radius: 100%;
+  height: 30vh;
+  width: 30vh;
+}
+html,
+body {
+  background-color: var(--bg-color);
+  scroll-behavior: smooth;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.facebook-link {
+  margin-left: 110px;
+}
+ul {
+  list-style-position: inside;
+  list-style-type: none;
+  list-style: none;
+  padding-left: 0;
+
+  > li {
+    text-indent: -5px;
+
+    &:before {
+      content: "-";
+      text-indent: -5px;
+    }
+  }
+}
+
+div .navbar {
+  position: fixed;
+  top: 0;
+  z-index: 3000;
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 500;
+  background-color: var(--bg-color-transparent);
+  min-width: 100%;
+  max-width: 100%;
+  height: 75px;
+  display: flex;
+  backdrop-filter: blur(6px);
+  justify-content: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-link-container {
+  margin: 0 auto;
+  display: flex;
+}
+.coach-container {
+  display: flex;
+}
+.navbar-link {
+  margin: auto 40px;
+  padding: 4px;
+  border-style: solid;
+  border-width: 2px;
+  background-color: rgba(255, 255, 255, 0);
+  border-color: rgba(255, 255, 255, 0);
+  font-size: large;
+  font-weight: bold;
+  transition: all 0.3s;
+  color: rgb(203, 231, 255);
+  text-decoration: none;
+
+  &:hover {
+    color: rgb(203, 231, 255);
+    cursor: pointer;
+    border-color: rgb(203, 231, 255);
+    transition: all 0.3s;
+  }
+
+  &:first-child {
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(203, 231, 255);
+    padding: 4px;
+  }
+}
+
+.go-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  right: 40px;
+  z-index: 10000;
+  margin: 12.5px 0;
+  border-radius: 100px;
+  height: 50px;
+  width: 50px;
+  background-color: var(--text-color);
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.bi {
+  color: white;
+  font-size: 30px;
+}
+
+.bi-arrow-left {
+  color: var(--bg-color);
+  font-size: 30px;
+}
+
+.go-back p {
+  margin-bottom: 0px;
+}
+
+.navbar-logo {
+  margin: 0 40px;
+  transition: all 0.1s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.home-content {
+  color: var(--text-color);
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--bg-color);
+}
+
+.contact-content {
+  padding: 2%;
+  overflow: hidden;
+  background-image: url("./pictures/swim.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-blend-mode: lighten;
+  background-size: cover;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  padding: 20px;
+}
+
+.home-text {
+  color: var(--text-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 204;
+  font-size: 75px;
+  font-weight: 1000;
+
+  p {
+    color: var(--text-color);
+    font-size: 40%;
+    font-weight: 800;
+    margin-top: -5%;
+  }
+
+  h2 {
+    color: var(--text-color);
+    font-size: 50%;
+    font-weight: 1000;
+  }
+}
+
+.home-image {
+  min-width: 100%;
+  z-index: 400;
+  min-height: 100%;
+}
+
+.who-am-i {
+  color: var(--text-color);
+  padding-bottom: 30px;
+  font: 33px sans-serif;
+  font-family: "Maven Pro", sans-serif;
+  padding-top: 30px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 1;
+  font-weight: bolder;
+  transition: all 0.3s;
+  box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    color: rgb(203, 231, 255);
+    cursor: default;
+    transition: all 0.3s;
+  }
+
+  &:before {
+    border-top: 2px solid rgb(203, 231, 255);
+    content: "";
+    margin: 0 auto;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 60%;
+    z-index: -1;
+  }
+}
+
+h2 span {
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  background-size: cover;
+  padding: 0 15px;
+}
+
+.portfolio {
+  display: flex;
+}
+
+.contact-card {
+  margin: 0px;
+  padding: 0px;
+}
+
+.contact-title {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.contact-text {
+  font-size: 25px;
+}
+
+.portfolio-card {
+  background-color: var(--bg-color2);
+  width: 90%;
+  margin: 2%;
+  padding: 1%;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.map {
+  margin: auto;
+}
+
+.contact-card {
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+  margin: 2%;
+  padding: 2%;
+}
+
+.contact-input {
+  width: 70%;
+  border-radius: 10px;
+  font-family: "Maven Pro", sans-serif;
+  border: none;
+  background-color: rgba(240, 248, 255, 0.959);
+  transition: all 0.3s;
+}
+
+.bi-facebook:hover {
+  opacity: 0.7;
+}
+
+.contact-textbox {
+  min-width: 70%;
+  max-width: 70%;
+  border-radius: 10px;
+  font-family: "Maven Pro", sans-serif;
+  border: none;
+  background-color: rgba(240, 248, 255, 0.959);
+  resize: none;
+  transition: all 0.3s;
+}
+
+.portfolio-container {
+  background-blend-mode: lighten;
+  background-image: url("./pictures/swim.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: var(--bg-color);
+  background-size: cover;
+}
+
+.contact-textbox:focus,
+.contact-input:focus {
+  outline: none;
+  transition: all 0.3s;
+  background-color: rgb(255, 255, 255);
+}
+
+.contact-button {
+  border: none;
+  padding: 10px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  background-color: var(--bg-color2);
+  color: var(--text-color);
+  transition: all 0.3s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.contact {
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.program-card {
+  transition: all 1s;
+  margin: 5px 20px;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.programs {
+  background-image: url("./pictures/swim.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-blend-mode: lighten;
+  background-size: cover;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  padding: 20px;
+
+  h2 {
+    color: var(--text-color);
+  }
+}
+
+.program-button {
+  background-color: aliceblue;
+  padding: 20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  transition: all 0.3s;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(203, 231, 255);
+    transition: all 0.3s;
+  }
+}
+
+.program-button-text {
+  &:hover {
+    color: rgb(203, 231, 255);
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.challenge-coach-card {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #272a2cd5;
+  color: var(--text-color);
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -75px;
+  visibility: hidden;
+}
+
+.back-to-top {
+  position: -webkit-sticky;
+  position: fixed;
+  bottom: 1rem;
+  z-index: 100;
+  background-color: var(--bg-color-transparent);
+  width: 50px;
+  height: 50px;
+  top: 95%;
+  left: 50%;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  display: flex;
+  border-radius: 100%;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+
+  &:hover {
+    top: 94%;
+    transition: all 0.3s;
+    cursor: pointer;
+    opacity: 0.8;
+  }
+}
+
+.bi-linkedin {
+  font-size: 1rem;
+  margin-left: 10px;
+  cursor: pointer;
+
+  &:hover {
+    color: #cce6ff;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  padding-left: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f4f4f4;
+  border-radius: 10px;
+  border: 2px solid var(--bg-color);
+  transition: all 1s;
+
+  &:hover {
+    background: rgb(203, 231, 255);
+    transition: all 1s;
+  }
+}
+
+::-moz-selection {
+  color: aliceblue;
+  background: #444444;
+}
+
+::selection {
+  color: aliceblue;
+  background: var(--bg-color);
+}
+
+.footer {
+  background-color: var(--bg-color);
+  width: 100%;
+  justify-content: space-between;
+  position: absolute;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+
+  p {
+    margin: 1.5%;
+    font-size: large;
+    font-weight: bolder;
+    color: #f4f4f4;
+  }
+}
+
+.hamburger-menu-div {
+  display: none;
+}

@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class Portfolio extends Component {
     render() {
         return (
-            <div>
+            <div className="portfolio-container">
                 <a className="anchor" id="portfolio"></a>
                 <h2 className="who-am-i"><span>Wie ben ik</span></h2>
                 <div className="portfolio">
@@ -20,6 +20,10 @@ export default class Portfolio extends Component {
                 <div className="portfolio-card">
                 <p>
                 In functie van mijn beroep ontwikkelde ik deze website met eenvoudige en eerlijke informatie over privé zwemlessen. Ik promoot de zwemsport en de gezonde voordelen hiervan maar ook de combinatie van zwemsport met gewichtstraining omdat dat naar mijn inzien zeer doeltreffender is om uw conditie en gezondheid te verbeteren en te onderhouden.
+                Erkend lesgever Stad Antwerpen/Bloso
+Ex competitiezwemmer
+Hoger redder
+Resque diver
                 </p>
                 </div>
                 </div>

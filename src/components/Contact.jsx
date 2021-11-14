@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import toast from "react-hot-toast";
 import emailjs from 'emailjs-com'
 
 export default class Contact extends Component {
@@ -19,20 +18,16 @@ export default class Contact extends Component {
 
   handleSubmit = async (e) => {
     e.preventDefault();
-    const toastId = toast.loading('Sending Message...');
     const templateParams = {
       from_name: this.state.email,
-      to_name: "sennebels@gmail.com",
+      to_name: "ivan.faes1@gmail.com",
       message: this.state.message
     };
     emailjs
-      .send("service_vb780fd", "template_1f0e3rf", templateParams, "user_iKcb9b4DVPIx7HcQpW8gf")
+      .send("service_nbzu3fx", "template_kfs0kio", templateParams, "user_5uY4AFCVaYGd2r6z3giBo")
       .then(() => {
-        toast.dismiss(toastId)
-        toast.success("Message sent!")
       })
       .catch(error => {
-        toast.error("Your message was not able to be sent");
       })
   }
 
@@ -40,34 +35,11 @@ export default class Contact extends Component {
     return (
       <div className="contact-content">
         <a className="anchor" id="contact"></a>
+        <h2>Contact</h2>
         <div>
-          <div className="lg:w-2/3 md:w-1/2 bg-gray-900 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
-            <div className="contact-full" style={{ display: 'flex', width: 100 + "%", height: 100 + "%" }}>
-              <div style={{ display: 'flex',width: 100 + "%", flexDirection: "column", justifyContent:"center", alignItems:"center" }}>
-                <div className="contact-card" style={{height: 35 + "%", width: 90 + "%"}}>
-                  <div>
-                    <h2>
-                      ADRES
-                    </h2>
-                    <p>
-                      STRAAT, NR<br />
-                      STAD
-                    </p>
-                  </div>
-                  <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
-                    <h2>
-                      EMAIL
-                    </h2>
-                    <a className="text-indigo-400 leading-relaxed">
-                      ivan.faes1@gmail.com
-                    </a>
-                    <h2 className="title-font font-semibold text-white tracking-widest text-xs mt-4">
-                      GSM
-                    </h2>
-                    <p className="leading-relaxed">+32-477-45-10-00</p>
-                  </div>
-                </div>
-                <div className="contact-card" style={{ width: 90 + "%", height: 55 + "%" }}>
+          <div>
+              <div className="contact-full">
+              <div className="contact-card" style={{flex: 4}}>
                   <form
                     name="contact"
                     onSubmit={this.handleSubmit}
@@ -75,7 +47,7 @@ export default class Contact extends Component {
                     <h2>
                       Contact
                     </h2>
-                    <p className="leading-relaxed mb-5">
+                    <p>
                       Stuur hier voor meer info een bericht.</p>
                     <div className="relative mb-4">
                       <input
@@ -114,17 +86,21 @@ export default class Contact extends Component {
                     </button>
                   </form>
                 </div>
+                <div className="contact-card" style={{flex: 1}}>
+                  <div>
+                    <h2 className="contact-title">
+                      EMAIL
+                    </h2>
+                    <a href="mailto:ivan.faes1@gmail.com" className="contact-text">
+                      ivan.faes1@gmail.com
+                    </a>
+                    <h2 className="contact-title">
+                      GSM
+                    </h2>
+                    <p className="contact-text">+32-477-45-10-00</p>
+                  </div>
+                </div>
               </div>
-              <div className="map-container" style={{ width: 100 + "%",display:"flex", justifyContent: "center", alignItems:"center" }}>
-                <iframe
-                className="map"
-                  width="90%"
-                  height="90%"
-                  title="map"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d208867.62157009047!2d4.405237023020187!3d51.19682961303586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f6da2a095203%3A0x6a9c80feae18feda!2sOlympic%20swimming%20center%20Wezenberg!5e0!3m2!1sen!2sbe!4v1628935893673!5m2!1sen!2sbe"
-                />
-              </div>
-            </div>
           </div>
         </div>
       </div>
