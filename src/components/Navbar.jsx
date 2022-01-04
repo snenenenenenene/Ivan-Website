@@ -1,5 +1,5 @@
-import React, { Component, useState } from "react";
-
+import React, { useState } from "react";
+import {HashLink as Link} from 'react-router-hash-link'
 const Navbar = () => {
   const [active, setActive] = useState(false);
   return (
@@ -16,7 +16,7 @@ const Navbar = () => {
           <path d="M41 14H7a2 2 0 010-4h34a2 2 0 010 4zM41 26H7a2 2 0 010-4h34a2 2 0 010 4zM41 38H7a2 2 0 010-4h34a2 2 0 010 4z" />
         </svg>
       </div>
-      <a href="#home" style={{ display: "flex" }}>
+      <Link to="/#home" style={{ display: "flex" }}>
         <svg
           width="60"
           className="navbar-logo"
@@ -68,28 +68,27 @@ const Navbar = () => {
             <path d="M282.264 292.195l-4.578-7.548c-3.793-6.253-1.799-14.396 4.454-18.189 6.252-3.793 14.396-1.799 18.189 4.454l4.578 7.548c3.793 6.252 1.799 14.396-4.454 18.188-6.253 3.793-14.396 1.799-18.189-4.453zM323.411 308.966l-.191-.316c-3.793-6.252-11.936-8.247-18.188-4.454-1.99 1.207-3.493 2.882-4.572 4.769l22.951.001z" />
           </g>
         </svg>
-      </a>
+      </Link>
       <div
         className={
           active ? "navbar-link-container active" : "navbar-link-container"
         }
       >
-        <a href="/#home" className="navbar-link">
+        <Link to="/#home" className="navbar-link">
           Home
-        </a>
-        <a href="/#portfolio" className="navbar-link">
-          Portfolio
-        </a>
-        <a href="/#programs" className="navbar-link">
+        </Link>
+        <Link to="/#portfolio" className="navbar-link">
+          Wie ben ik?
+        </Link>
+        <Link to="/#programs" className="navbar-link">
           Onderdelen
-        </a>
-        {/* <a href="#tarifs" className="navbar-link">Tarieven</a>  */}
-        <a href="/#contact" className="navbar-link">
+        </Link>
+        <Link to="/#contact" className="navbar-link">
           Contact
-        </a>
-        <a href="/#FAQ" className="navbar-link">
+        </Link>
+        <Link to="/#FAQ" className="navbar-link">
           FAQ
-        </a>
+        </Link>
         <a
           className="facebook-link"
           href="https://facebook.com/IvanFaesPrivateSwimAdvice"

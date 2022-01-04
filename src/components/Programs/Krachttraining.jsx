@@ -1,9 +1,10 @@
+import { HashLink as Link } from "react-router-hash-link";
 const Krachttraining = () => {
   return (
     <div className="program-container kracht">
-      <a className="go-back" href="/">
+      <Link className="go-back" to="/">
         <i className="bi bi-arrow-left"></i>
-      </a>
+      </Link>
 
       <h2>Kracht</h2>
       <p>

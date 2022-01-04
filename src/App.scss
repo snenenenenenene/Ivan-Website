@@ -1,8 +1,12 @@
 :root {
   --bg-color: #272a2c;
   --bg-color-transparent: #5f686d5b;
-  --bg-color2: #283b47;
+  --bg-color2: #1D3645;
   --text-color: #fff;
+}
+
+* {
+  font-size: large;
 }
 
 .App {
@@ -10,6 +14,11 @@
   text-align: center;
 }
 
+.programs-container {
+ display: flex;
+ justify-content: space-around;
+ padding: 0 300px;
+}
 .program-container {
   height: 100vh;
   padding-top: 10px;
@@ -167,14 +176,6 @@ div {
     }
   }
 
-  .portfolio-card {
-    margin: 2% auto;
-    transition: all 1s;
-
-    &:hover {
-    }
-  }
-
   .instaples {
     flex-direction: column;
     justify-content: center;
@@ -211,8 +212,8 @@ div {
 
 .coach-image {
   border-radius: 100%;
-  height: 30vh;
-  width: 30vh;
+  height: 20vh;
+  width: 20vh;
 }
 html,
 body {
@@ -246,6 +247,8 @@ div .navbar {
   top: 0;
   z-index: 3000;
   font-family: "Maven Pro", sans-serif;
+  // -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   font-weight: 500;
   background-color: var(--bg-color-transparent);
   min-width: 100%;
@@ -388,10 +391,9 @@ div .navbar {
 
 .who-am-i {
   color: var(--text-color);
-  padding-bottom: 30px;
-  font: 33px sans-serif;
+  padding-bottom: 1rem;
   font-family: "Maven Pro", sans-serif;
-  padding-top: 30px;
+  padding-top: 1rem;
   position: relative;
   text-align: center;
   text-transform: uppercase;
@@ -422,13 +424,24 @@ div .navbar {
 
 h2 span {
   background-color: var(--bg-color);
-  border-radius: 10px;
+  border-radius: 1px;
   background-size: cover;
   padding: 0 15px;
+  font-size: 1em;
 }
 
 .portfolio {
   display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color2);
+  border-radius: 5px;
+  text-align: left;
+  margin: 0 5vh;
+  padding: 2vh 1vw;
+}
+
+.portfolio-row {
+  padding: 0 20px;
 }
 
 .contact-card {
@@ -446,13 +459,14 @@ h2 span {
   font-size: 25px;
 }
 
-.portfolio-card {
-  background-color: var(--bg-color2);
-  width: 90%;
-  margin: 2%;
-  padding: 1%;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
+.portfolio-column {
+  display: flex;
+}
+
+.portfolio-column-component {
+  flex: 1 1 5px;
+  padding: 5px 20px;
+  word-break:normal;
 }
 
 .map {
@@ -509,12 +523,14 @@ h2 span {
 
 .contact-button {
   border: none;
-  padding: 10px;
+  padding: 10px 20px;
   text-transform: uppercase;
   border-radius: 10px;
   background-color: var(--bg-color2);
   color: var(--text-color);
+  border: 2px solid var(--text-color);
   transition: all 0.3s;
+  font-size: larger;
 
   &:hover {
     opacity: 0.7;
@@ -558,8 +574,13 @@ h2 span {
 
   &:hover {
     cursor: pointer;
-    background-color: rgb(203, 231, 255);
+    background-color: var(--bg-color2);
+    color: var(--text-color);
+    fill: var(--text-color);
     transition: all 0.3s;
+    outline: var(--text-color);
+    border-radius: 40px;
+  border: 2px solid var(--text-color);
   }
 }
 

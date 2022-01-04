@@ -44,9 +44,6 @@ export default class Contact extends Component {
                     name="contact"
                     onSubmit={this.handleSubmit}
                   >
-                    <h2>
-                      Contact
-                    </h2>
                     <p>
                       Stuur hier voor meer info een bericht.</p>
                     <div className="relative mb-4">

@@ -5,7 +5,7 @@ export default class HomeSection extends Component {
         return (
             <div id="home">
                 <div className="home-content">
-                <img className="home-image" style={{opacity: "0.521", zIndex: 200}}src={picture1}/>
+                <img className="home-image" style={{opacity: "0.521", zIndex: 200}}src={picture1} alt='background'/>
                 </div>
                 <div className="home-text">
                    <h2>PRIVEZWEMLESSEN</h2>
