@@ -26,8 +26,10 @@ export default class Contact extends Component {
     emailjs
       .send("service_nbzu3fx", "template_kfs0kio", templateParams, "user_5uY4AFCVaYGd2r6z3giBo")
       .then(() => {
+        alert("Bericht Verzonden!")
       })
       .catch(error => {
+        alert("Bericht Niet Kunnen Verzenden")
       })
   }
 

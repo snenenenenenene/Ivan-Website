@@ -16,7 +16,7 @@ export default class Programs extends Component {
         <a className="anchor" id="programs"></a>
         <h2>Onderdelen</h2>
         <div className="programs-container">
-          {/* <a href="/zerostarter">
+          <Link to="/zerostarter">
         <svg width="256px" className="program-button" height="256px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
   <path d="M128,68c-14.43848,0-26.73047,7.44043-34.61328,20.95215C87.334,99.32715,84,113.19434,84,128c0,14.80371,3.334,28.6709,9.38672,39.04688C101.26953,180.55859,113.5625,188,128,188s26.73047-7.44141,34.61328-20.95312C168.666,156.6709,172,142.80371,172,128c0-14.80566-3.334-28.67285-9.38672-39.04785C154.73047,75.44043,142.43848,68,128,68Zm0,96c-15.82031,0-20-23.54883-20-36s4.17969-36,20-36,20,23.54883,20,36S143.82031,164,128,164Zm0-144A108,108,0,1,0,236,128,108.12186,108.12186,0,0,0,128,20Zm0,192a84,84,0,1,1,84-84A84.09562,84.09562,0,0,1,128,212Z"/>
 </svg>
@@ -29,7 +29,7 @@ export default class Programs extends Component {
             >
               ZEROSTARTER
             </p>
-          </a> */}
+          </Link>
           <Link to="/crawl">
             <svg
               className="program-button"
@@ -87,10 +87,10 @@ export default class Programs extends Component {
         ></div>
         <div>
           <div className="challenge-coach-card">
-            <div style={{ display: "flex" }}>
-              <div style={{ flex: 1 }}>
-                <p>INSTAPLES:</p>
-                <ul style={{ paddingLeft: 0 }}>
+            <div className="coach-card-flex">
+              <div style={{ flex: 1, textAlign: "left" }}>
+                <p style={{fontWeight: "bolder"}}>INSTAPLES:</p>
+                <ul style={{ paddingLeft: 0, display: "inline-block" }}>
                   <li>Kennismaking</li>
                   <li>Gesprek doelstelling</li>
                   <li>Theorie basis</li>
@@ -98,9 +98,9 @@ export default class Programs extends Component {
                   <li>Bespreking verder verloop</li>
                 </ul>
               </div>
-              <div style={{ flex: 1 }}>
-                <p>BELANGRIJKE AFSPRAKEN VOOR DE LES:</p>
-                <ul>
+              <div style={{ flex: 1, textAlign: "left"}}>
+                <p style={{fontWeight: "bolder"}}>BELANGRIJKE AFSPRAKEN VOOR DE LES:</p>
+                <ul style={{paddingLeft: 0, display: "inline-block" }}>
                   <li>
                     Tien lessen met voorbetalingstarief starten op datum eerste
                     les en vervallen na één kalenderjaar te rekenen vanaf

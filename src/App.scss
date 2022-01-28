@@ -17,7 +17,7 @@
 .programs-container {
  display: flex;
  justify-content: space-around;
- padding: 0 300px;
+ padding: 0 10%;
 }
 .program-container {
   height: 100vh;
@@ -103,6 +103,10 @@ div {
 }
 
 @media screen and (max-width: 990px) {
+  * {
+    font-size:medium;
+  }
+
   .challenge-coach-card {
     display: flex;
     flex-direction: column;
@@ -157,6 +161,11 @@ div {
       }
     }
 
+    .coach-card-flex{
+      flex-direction: column;
+      text-align: left;
+    }
+
     .navbar-logo {
       display: none;
     }
@@ -173,7 +182,12 @@ div {
 
     .hamburger-menu-div {
       display: flex;
+
     }
+  }
+
+  .portfolio-column{
+    flex-direction: column;
   }
 
   .instaples {
@@ -210,6 +224,9 @@ div {
   font-family: "Maven Pro", sans-serif;
 }
 
+.coach-card-flex{
+  display: flex;
+}
 .coach-image {
   border-radius: 100%;
   height: 20vh;
@@ -224,7 +241,7 @@ body {
 }
 
 .facebook-link {
-  margin-left: 110px;
+  margin: 0 auto;
 }
 ul {
   list-style-position: inside;
@@ -698,4 +715,7 @@ a.anchor {
 
 .hamburger-menu-div {
   display: none;
+}
+.hamburger-menu {
+  cursor: pointer;
 }
